@@ -1,18 +1,11 @@
-# Redirect all requests to web/out/ subdirectory
+Options -Indexes
+ErrorDocument 404 /404.html
+
 RewriteEngine On
 RewriteBase /
 
-# If the requested file doesn't exist in current dir, serve from web/out/
-RewriteCond %{REQUEST_URI} !^/web/out/
-RewriteCond %{DOCUMENT_ROOT}/web/out%{REQUEST_URI} -f [OR]
-RewriteCond %{DOCUMENT_ROOT}/web/out%{REQUEST_URI} -d
-RewriteRule ^(.*)$ /web/out/$1 [L]
-
-# For clean URLs - serve .html files without extension
-RewriteCond %{REQUEST_URI} !^/web/out/
-RewriteCond %{DOCUMENT_ROOT}/web/out%{REQUEST_URI}.html -f
-RewriteRule ^(.*)$ /web/out/$1.html [L]
-
-# Default: serve index.html from web/out/
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^$ /web/out/index.html [L]
+# Serve .html files without extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

@@ -2,6 +2,10 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/sites/34a/f/f7d85e3f87/public_html
-    - /bin/rm -rf $DEPLOYPATH/_next
-    - /bin/cp -R web/out/* $DEPLOYPATH/
-    - /bin/cp -R web/out/images $DEPLOYPATH/ 2>/dev/null; true
+    - /bin/cp -f web/out/*.html $DEPLOYPATH/
+    - /bin/cp -f web/out/robots.txt $DEPLOYPATH/
+    - /bin/cp -f web/out/sitemap.xml $DEPLOYPATH/
+    - /bin/cp -f web/out/favicon.ico $DEPLOYPATH/
+    - /bin/cp -Rf web/out/_next $DEPLOYPATH/
+    - /bin/cp -Rf web/out/images $DEPLOYPATH/
+    - /bin/cp -f .htaccess $DEPLOYPATH/
