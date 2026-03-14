@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sites/34a/f/f7d85e3f87/public_html
+    - /bin/cp -R web/out/* $DEPLOYPATH/
+    - /bin/cp -R web/out/.* $DEPLOYPATH/ 2>/dev/null; true
+    - /bin/cp -R web/public/images $DEPLOYPATH/

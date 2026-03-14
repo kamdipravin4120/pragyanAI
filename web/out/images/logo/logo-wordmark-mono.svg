@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80">
+  <defs>
+    <radialGradient id="wmMonoGlow" cx="50%" cy="75%" r="40%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- === ICON (white mono) === -->
+  <g transform="translate(10, 8)">
+    <!-- Outer-left petal -->
+    <path d="M30,52 Q22,50 12,47 Q8,43 14,39 Q20,37 26,38 Q28,44 30,52Z"
+      fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.6" stroke-linejoin="round"/>
+
+    <!-- Outer-right petal -->
+    <path d="M30,52 Q38,50 48,47 Q52,43 46,39 Q40,37 34,38 Q32,44 30,52Z"
+      fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.6" stroke-linejoin="round"/>
+
+    <!-- Middle-left petal -->
+    <path d="M30,52 Q24,44 19,34 Q17,28 20,26 Q24,27 28,32 Q30,40 30,52Z"
+      fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.7" stroke-linejoin="round"/>
+
+    <!-- Middle-right petal -->
+    <path d="M30,52 Q36,44 41,34 Q43,28 40,26 Q36,27 32,32 Q30,40 30,52Z"
+      fill="#ffffff" fill-opacity="0.2" stroke="#ffffff" stroke-width="0.8" stroke-opacity="0.7" stroke-linejoin="round"/>
+
+    <!-- Center petal -->
+    <path d="M30,52 Q28,40 27.5,30 Q27.8,20 30,10 Q32.2,20 32.5,30 Q32,40 30,52Z"
+      fill="#ffffff" fill-opacity="0.25" stroke="#ffffff" stroke-width="1" stroke-opacity="0.8" stroke-linejoin="round"/>
+
+    <!-- Center glow -->
+    <ellipse cx="30" cy="52" rx="16" ry="7" fill="url(#wmMonoGlow)"/>
+
+    <!-- Nodes -->
+    <circle cx="30" cy="14" r="1.5" fill="#ffffff" fill-opacity="0.9"/>
+    <circle cx="19" cy="31" r="1.3" fill="#ffffff" fill-opacity="0.7"/>
+    <circle cx="41" cy="31" r="1.3" fill="#ffffff" fill-opacity="0.7"/>
+    <circle cx="13" cy="45" r="1" fill="#ffffff" fill-opacity="0.6"/>
+    <circle cx="47" cy="45" r="1" fill="#ffffff" fill-opacity="0.6"/>
+
+    <!-- Connections -->
+    <g stroke="#ffffff" stroke-width="0.4" stroke-opacity="0.25" stroke-dasharray="2,2.5" fill="none">
+      <line x1="30" y1="14" x2="19" y2="31"/>
+      <line x1="30" y1="14" x2="41" y2="31"/>
+      <line x1="19" y1="31" x2="13" y2="45"/>
+      <line x1="41" y1="31" x2="47" y2="45"/>
+    </g>
+
+    <!-- Core -->
+    <circle cx="30" cy="51" r="2.5" fill="#ffffff" fill-opacity="0.8"/>
+    <circle cx="30" cy="51" r="1.2" fill="#ffffff"/>
+  </g>
+
+  <!-- === TEXT (all white) === -->
+  <g transform="translate(82, 0)">
+    <text x="0" y="49" font-family="'Space Grotesk', 'Inter', 'Segoe UI', system-ui, sans-serif"
+      font-weight="700" font-size="28" letter-spacing="0.15em"
+      fill="#ffffff">PRAGYAN</text>
+    <text x="215" y="49" font-family="'Space Grotesk', 'Inter', 'Segoe UI', system-ui, sans-serif"
+      font-weight="700" font-size="28" letter-spacing="0.15em"
+      fill="#ffffff" fill-opacity="0.8">AI</text>
+  </g>
+</svg>

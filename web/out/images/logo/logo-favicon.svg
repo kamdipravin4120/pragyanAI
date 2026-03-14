@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="favPetalGrad" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a5f" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.4"/>
+    </linearGradient>
+    <radialGradient id="favCenterGlow" cx="50%" cy="75%" r="35%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffd700" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="favGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left petal -->
+  <path d="M16,22 Q12,20 7,18 Q9,15 12,14 Q14,16 16,22Z"
+    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.7" stroke-opacity="0.8" stroke-linejoin="round"/>
+  <path d="M16,22 Q12,20 7,18"
+    fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.6"/>
+
+  <!-- Right petal -->
+  <path d="M16,22 Q20,20 25,18 Q23,15 20,14 Q18,16 16,22Z"
+    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.7" stroke-opacity="0.8" stroke-linejoin="round"/>
+  <path d="M16,22 Q20,20 25,18"
+    fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.6"/>
+
+  <!-- Center petal (tallest) -->
+  <path d="M16,22 Q14.5,16 14.8,12 Q15.2,9 16,7 Q16.8,9 17.2,12 Q17.5,16 16,22Z"
+    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.8" stroke-opacity="0.9" stroke-linejoin="round"/>
+  <path d="M16,21 L16,8"
+    fill="none" stroke="#00f0ff" stroke-width="0.4" stroke-opacity="0.5"/>
+
+  <!-- Center glow -->
+  <ellipse cx="16" cy="22" rx="8" ry="4" fill="url(#favCenterGlow)"/>
+
+  <!-- Neural nodes -->
+  <g filter="url(#favGlow)">
+    <circle cx="16" cy="9" r="1.2" fill="#00f0ff" fill-opacity="0.9"/>
+    <circle cx="9" cy="17" r="1" fill="#00f0ff" fill-opacity="0.8"/>
+    <circle cx="23" cy="17" r="1" fill="#00f0ff" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Bright core -->
+  <circle cx="16" cy="21.5" r="1.5" fill="#ffffff" fill-opacity="0.9"/>
+</svg>
