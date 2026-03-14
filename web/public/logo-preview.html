@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pragyan AI - Logo Variants Preview</title>
+  <style>
+    body { background: #0a0a1a; color: #ededed; font-family: 'Inter', sans-serif; margin: 0; padding: 40px; }
+    h1 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+    h1 span { background: linear-gradient(135deg, #00f0ff, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto; }
+    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; text-align: center; }
+    .card h2 { font-size: 1.1rem; color: #00f0ff; margin-bottom: 20px; }
+    .card p { font-size: 0.85rem; color: #a1a1aa; margin-top: 15px; }
+    .card img, .card object { max-width: 100%; height: auto; }
+    .dark-bg { background: #0a0a1a; padding: 20px; border-radius: 12px; }
+    .light-bg { background: #ffffff; padding: 20px; border-radius: 12px; }
+    .sizes { display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 20px; }
+    .sizes img { border: 1px dashed rgba(0,240,255,0.2); padding: 4px; }
+  </style>
+</head>
+<body>
+  <h1><span>Pragyan AI</span> — Logo Variants</h1>
+
+  <div class="grid">
+    <!-- 1. Full Color -->
+    <div class="card">
+      <h2>1. Full Color (Crystal + Neural Bloom)</h2>
+      <div class="dark-bg">
+        <img src="/images/logo/logo-full-color.svg" alt="Full color logo" width="300" height="300">
+      </div>
+      <p>Primary logo — faceted crystal petals, circuit traces, neural nodes, gold outlines, cyan glow. For dark backgrounds.</p>
+    </div>
+
+    <!-- 2. Monochrome -->
+    <div class="card">
+      <h2>2. Monochrome (White)</h2>
+      <div class="dark-bg">
+        <img src="/images/logo/logo-mono.svg" alt="Mono logo" width="300" height="300">
+      </div>
+      <p>White-only variant at varying opacities. For single-color usage, watermarks, overlays.</p>
+    </div>
+
+    <!-- 3. Favicon -->
+    <div class="card">
+      <h2>3. Favicon (Simplified)</h2>
+      <div class="dark-bg" style="display:flex; align-items:center; justify-content:center; gap:20px;">
+        <img src="/images/logo/logo-favicon.svg" alt="Favicon" width="128" height="128">
+        <img src="/images/logo/logo-favicon.svg" alt="Favicon small" width="64" height="64">
+        <img src="/images/logo/logo-favicon.svg" alt="Favicon tiny" width="32" height="32">
+      </div>
+      <p>Simplified for small sizes — fewer petals, no circuit traces, bold strokes. For browser tabs, app icons.</p>
+    </div>
+
+    <!-- 4. Wordmark Color -->
+    <div class="card">
+      <h2>4. Wordmark — Color</h2>
+      <div class="dark-bg">
+        <img src="/images/logo/logo-wordmark-color.svg" alt="Color wordmark" width="380">
+      </div>
+      <p>"PRAGYAN" in cyan + "AI" in gold. For headers, presentations, marketing.</p>
+    </div>
+
+    <!-- 5. Wordmark Mono -->
+    <div class="card">
+      <h2>5. Wordmark — Mono (White)</h2>
+      <div class="dark-bg">
+        <img src="/images/logo/logo-wordmark-mono.svg" alt="Mono wordmark" width="380">
+      </div>
+      <p>All-white wordmark. For dark backgrounds where color is not needed.</p>
+      <div class="light-bg" style="margin-top:15px;">
+        <img src="/images/logo/logo-wordmark-mono.svg" alt="Mono wordmark on light" width="380" style="filter: invert(1);">
+      </div>
+      <p style="font-size:0.75rem;">↑ Inverted for light backgrounds</p>
+    </div>
+  </div>
+</body>
+</html>

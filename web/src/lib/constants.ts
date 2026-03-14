@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   phone: "8356919181",
   phoneFormatted: "+91 83569 19181",
   email: "contact@pragyanai.in",
-  logo: "/images/logo/logo-full-color.svg",
+  logo: "/images/logo/logo.png",
   ogImage: "/images/og/og-default.png",
 } as const;
 

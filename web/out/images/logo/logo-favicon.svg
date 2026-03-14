@@ -1,51 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
-    <linearGradient id="favPetalGrad" x1="50%" y1="100%" x2="50%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a5f" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.4"/>
+    <linearGradient id="fGold" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8960b"/>
+      <stop offset="50%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#fff0a0"/>
     </linearGradient>
-    <radialGradient id="favCenterGlow" cx="50%" cy="75%" r="35%">
+    <radialGradient id="fGlow" cx="50%" cy="78%" r="30%">
       <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="40%" stop-color="#ffd700" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#ffd700" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
     </radialGradient>
-    <filter id="favGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="0.8" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
   </defs>
 
-  <!-- Left petal -->
-  <path d="M16,22 Q12,20 7,18 Q9,15 12,14 Q14,16 16,22Z"
-    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.7" stroke-opacity="0.8" stroke-linejoin="round"/>
-  <path d="M16,22 Q12,20 7,18"
-    fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.6"/>
+  <!-- Simplified lotus - 5 petals, bold strokes -->
+  <!-- Left base petal -->
+  <path d="M32,44 Q22,42 12,37 Q8,34 12,31 Q17,29 24,31 Q28,36 32,44Z"
+    fill="#8fb4e8" fill-opacity="0.15" stroke="url(#fGold)" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Right base petal -->
+  <path d="M32,44 Q42,42 52,37 Q56,34 52,31 Q47,29 40,31 Q36,36 32,44Z"
+    fill="#8fb4e8" fill-opacity="0.15" stroke="url(#fGold)" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Left inner petal -->
+  <path d="M32,44 Q26,38 21,28 Q19,22 22,19 Q26,19 29,24 Q31,32 32,44Z"
+    fill="#b0c8f0" fill-opacity="0.18" stroke="url(#fGold)" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Right inner petal -->
+  <path d="M32,44 Q38,38 43,28 Q45,22 42,19 Q38,19 35,24 Q33,32 32,44Z"
+    fill="#b0c8f0" fill-opacity="0.18" stroke="url(#fGold)" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Center petal -->
+  <path d="M32,44 Q29,36 28,27 Q28,20 32,14 Q36,20 36,27 Q35,36 32,44Z"
+    fill="#d0e0ff" fill-opacity="0.2" stroke="url(#fGold)" stroke-width="1.5" stroke-linejoin="round"/>
 
-  <!-- Right petal -->
-  <path d="M16,22 Q20,20 25,18 Q23,15 20,14 Q18,16 16,22Z"
-    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.7" stroke-opacity="0.8" stroke-linejoin="round"/>
-  <path d="M16,22 Q20,20 25,18"
-    fill="none" stroke="#00f0ff" stroke-width="0.5" stroke-opacity="0.6"/>
-
-  <!-- Center petal (tallest) -->
-  <path d="M16,22 Q14.5,16 14.8,12 Q15.2,9 16,7 Q16.8,9 17.2,12 Q17.5,16 16,22Z"
-    fill="url(#favPetalGrad)" stroke="#ffd700" stroke-width="0.8" stroke-opacity="0.9" stroke-linejoin="round"/>
-  <path d="M16,21 L16,8"
-    fill="none" stroke="#00f0ff" stroke-width="0.4" stroke-opacity="0.5"/>
-
-  <!-- Center glow -->
-  <ellipse cx="16" cy="22" rx="8" ry="4" fill="url(#favCenterGlow)"/>
+  <!-- Cyan edges -->
+  <path d="M32,44 Q22,42 12,37 Q8,34 12,31" fill="none" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.7"/>
+  <path d="M32,44 Q42,42 52,37 Q56,34 52,31" fill="none" stroke="#00f0ff" stroke-width="0.8" stroke-opacity="0.7"/>
 
   <!-- Neural nodes -->
-  <g filter="url(#favGlow)">
-    <circle cx="16" cy="9" r="1.2" fill="#00f0ff" fill-opacity="0.9"/>
-    <circle cx="9" cy="17" r="1" fill="#00f0ff" fill-opacity="0.8"/>
-    <circle cx="23" cy="17" r="1" fill="#00f0ff" fill-opacity="0.8"/>
-  </g>
+  <circle cx="32" cy="16" r="1.8" fill="#00f0ff" fill-opacity="0.9"/>
+  <circle cx="21" cy="26" r="1.5" fill="#00f0ff" fill-opacity="0.7"/>
+  <circle cx="43" cy="26" r="1.5" fill="#00f0ff" fill-opacity="0.7"/>
 
-  <!-- Bright core -->
-  <circle cx="16" cy="21.5" r="1.5" fill="#ffffff" fill-opacity="0.9"/>
+  <!-- Center glow -->
+  <ellipse cx="32" cy="44" rx="14" ry="6" fill="url(#fGlow)"/>
+  <circle cx="32" cy="43" r="2" fill="#ffffff"/>
 </svg>
